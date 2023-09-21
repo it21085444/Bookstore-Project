@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "react-router-dom": "^6.16.0"
+  },
+  "scripts": {
+    "build": "node_modules/.bin/vite build",
+    "start": "node_modules/.bin/vite"
   }
 }

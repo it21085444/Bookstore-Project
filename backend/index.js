@@ -12,16 +12,16 @@ app.use(express.json());
 
 //Middleware for handling CORS policy
 //Option 1: Allow all origins with default cors
-//app.use(cors());
+app.use(cors());
 
 //option 2: allow custom origins
-app.use(
-    cors({
-        origin: "http://localhost:5555",
-        methods: ['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type']
-    })
-    );
+// app.use(
+//     cors({
+//         origin: "http://localhost:5555",
+//         methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//         allowedHeaders: ['Content-Type']
+//     })
+//     );
 app.get('/', (request, response) => { //callback function handles get requests
     console.log(request)
     return response.status(234).send('welcome to mern turorial')
